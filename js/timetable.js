@@ -151,7 +151,7 @@ document.addEventListener("init", (event) => {
 
     //変更点
     if (localStorage.length != 0) {
-      for (i = 0; i <= 51; i++) {
+      for (let i = 0; i <= 51; i++) {
         if (localStorage.getItem("num" + i.toString()) != -1) {
           fav_EventEles[i].style.display = "";
           check[i] = 1;
@@ -161,7 +161,7 @@ document.addEventListener("init", (event) => {
         }
       }
     } else if (localStorage.length === 0) {
-      for (i = 0; i <= 51; i++) {
+      for (let i = 0; i <= 51; i++) {
         localStorage.setItem("num" + i.toString(), -1);
       }
     }
@@ -204,7 +204,7 @@ document.addEventListener("init", (event) => {
     });
   }
 
-  for (i = 0; i <= 51; i++) {
+  for (let i = 0; i <= 51; i++) {
     var favOrNot = localStorage.getItem("num" + i.toString());
     if (favOrNot > -1) {
       fav_EventEles[favOrNot].style.display = "block";
